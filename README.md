@@ -2,7 +2,7 @@
 programa {
   funcao inicio() {
     inteiro opcao
-    escreva("Bem vindo ao Tabuleiro Star Wars")
+    escreva("BEM VINDO AO TABULEIRO STAR WARS")
     escreva("\n1. Jogar")
     escreva("\n2. Verificar placar")
     escreva("\n3. Fechar o Jogo ")
