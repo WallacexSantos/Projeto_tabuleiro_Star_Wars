@@ -9,8 +9,9 @@ programa {
     escreva("\n3. Fechar o Jogo ")
     escreva("\n ")
     leia(opcao)
-     se (opcao  < 1 ou opcao > 3)
-     {escreva("opção invalida, digite novamente: ")}
+     se (opcao  < 1 ou opcao > 3){ 
+     escreva("opção invalida, digite novamente: ")
+     }
     }
     enquanto(opcao  < 1 ou opcao > 3)
   }
