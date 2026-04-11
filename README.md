@@ -1,7 +1,8 @@
-# Projeto_tabuleiro_Star_Wars
 programa {
   funcao inicio() {
-    inteiro opcao=1
+    inteiro opcao=1, nome=1
+    caracter nome_jogador_1, nome_jogador_2
+
     faca{
     escreva("BEM VINDO AO TABULEIRO STAR WARS")
     escreva("\n1. Jogar")
@@ -14,5 +15,22 @@ programa {
      }
     }
     enquanto(opcao  < 1 ou opcao > 3)
+
+    
+    se (opcao == 1) 
+      se (nome == 1) { nome++
+        escreva("Digite o nome do jogador 1: ")
+        leia(nome_jogador_1)
+        escreva("Digite o nome do jogador 2: ")
+        leia(nome_jogador_2)
+    }
+    
+     
+    
+    
+
+    
+
+
   }
 }
