@@ -108,7 +108,7 @@ programa {
           senao se(casa_jogador_1 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
           }
-          senao se(casa_jogador_1 == 25){
+          senao se(casa_jogador_1 >= 25){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
           }
         
@@ -195,7 +195,7 @@ programa {
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
           }
-          senao se(casa_jogador_2 == 25){
+          senao se(casa_jogador_2 >= 25){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
           }
       }
