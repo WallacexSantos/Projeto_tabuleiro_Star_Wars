@@ -2,7 +2,7 @@ programa {
   inclua biblioteca Util --> u
   funcao inicio() {
     inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0
-    cadeia nome_jogador_1, nome_jogador_2
+    cadeia nome_jogador_1 = "jedi' , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
       escreva("\n1. TECLE 1 PARA Jogar")
