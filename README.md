@@ -43,7 +43,8 @@ programa {
         } senao se(casa_jogador_1 == 2){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("Obi-Wan Kenobi: \nA Força estará com você. Sempre!!")
-            //deve avançar o jogador para a casa 5
+            casa_jogador_1 = casa_jogador_1 + 3
+            //deve avançar o jogador para a casa 5 feito!!!
           }
           senao se(casa_jogador_1 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -86,7 +87,8 @@ programa {
           senao se(casa_jogador_1 == 12){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("Luke Skywalker:\nTenho um mau pressentimento sobre isso.")
-             //deve retroceder 1 casa
+            casa_jogador_1 = casa_jogador_1 - 1
+             //deve retroceder 1 casa feito!!!!
           }
           senao se(casa_jogador_1 == 13){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -98,8 +100,8 @@ programa {
           }
           senao se(casa_jogador_1 == 15){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-            
-            //deve cantar um trecho de uma música (na vida real) ou voltar 2 casa
+            casa_jogador_1 = casa_jogador_1 - 2 
+            //deve cantar um trecho de uma música (na vida real) ou voltar 2 casa FALTA A MUSICA
           }
           senao se(casa_jogador_1 == 16){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -116,7 +118,8 @@ programa {
           senao se(casa_jogador_1 == 19){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("Admiral Ackbar:\nÉ uma armadilha")
-            //deve voltar para a casa 1
+            casa_jogador_1 = 1
+            //deve voltar para a casa 1 feito!!!
           }
           senao se(casa_jogador_1 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -169,7 +172,8 @@ programa {
         } senao se(casa_jogador_2 == 2){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("Palpatine:\nPoder! Poder ilimitado!")
-            //deve avançar o jogador para a casa 5
+            casa_jogador_2 = casa_jogador_2 + 3
+            //deve avançar o jogador para a casa 5 feito!!!
           }
           senao se(casa_jogador_2 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -213,7 +217,8 @@ programa {
           senao se(casa_jogador_2 == 12){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("Darth Vader:\nSinto algo… uma presença que não sentia desde…")
-            //deve retroceder 1 casa
+            casa_jogador_2 = casa_jogador_2 - 1
+            //deve retroceder 1 casa feito!!!
           }
           senao se(casa_jogador_2 == 13){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -225,8 +230,8 @@ programa {
           }
           senao se(casa_jogador_2 == 15){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
-            
-            //deve cantar um trecho de uma música (na vida real) ou voltar 2 casa
+            casa_jogador_2 = casa_jogador_2 - 2
+            //deve cantar um trecho de uma música (na vida real) ou voltar 2 casa FALTA A MUSICA
           }
           senao se(casa_jogador_2 == 16){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -243,7 +248,8 @@ programa {
           senao se(casa_jogador_2 == 19){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("Palpatine:\nSua ira o traiu.")
-            //deve voltar para a casa 1
+            casa_jogador_2 = 1
+            //deve voltar para a casa 1 feito!!!
           }
           senao se(casa_jogador_2 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
