@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, casa_vazia = 0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
@@ -84,7 +84,10 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nObi-Wan Kenobi:\nEra dito que você destruiria os Sith…")
             escreva("\n",nome_jogador_1, " trocou de casa com ",nome_jogador_2)
-            //deve trocar as casa em que os jogadores estão
+            casa_vazia = casa_jogador_1
+            casa_jogador_1 = casa_jogador_2
+            casa_jogador_2 = casa_vazia
+            //deve trocar as casa em que os jogadores estão feito!!!!
           }
           senao se(casa_jogador_1 == 11){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -220,7 +223,10 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader:\nJunte-se a mim, e juntos dominaremos a galáxia como pai e filho.")
             escreva("\n",nome_jogador_2, " trocou de casa com ",nome_jogador_1)
-            //deve trocar as casa em que os jogadores estão
+            casa_vazia = casa_jogador_1
+            casa_jogador_1 = casa_jogador_2
+            casa_jogador_2 = casa_vazia
+            //deve trocar as casa em que os jogadores estão feito!!!!
           }
           senao se(casa_jogador_2 == 11){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
