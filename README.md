@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, casa_vazia = 0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, casa_vazia = 0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
@@ -26,6 +26,7 @@ programa {
     }
     se (opcao == 1) {
       enquanto(casa_jogador_1 <25 e casa_jogador_2 <25){
+      	se ( rodada_jogador_1_livre == 0 ){
         faca{
           escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
           leia(rolardado)
@@ -71,6 +72,7 @@ programa {
             escreva("\nObi-Wan Kenobi:\nSenti uma grande perturbação na Força…")
             escreva("\n",nome_jogador_1, " fique sem jogar por 1 rodada.")
             //deve impedir que o jogador jogue o dado por 1 rodada
+            rodada_jogador_1_livre = rodada_jogador_1_livre +2
           }
           senao se(casa_jogador_1 == 8){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -163,7 +165,13 @@ programa {
             pontuacao_jogador_1 ++
         		escreva ("\nvitoria ",nome_jogador_1)
           }
+          se (rodada_jogador_2_livre !=0){
+          	rodada_jogador_2_livre--
+          }
+          }
           se (casa_jogador_1 <25)
+          {
+          se (rodada_jogador_2_livre == 0 )
           {
         faca{
           escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
@@ -210,6 +218,7 @@ programa {
             escreva("\nDarth Vader:\nSua falta de fé é perturbadora.")
             escreva("\n",nome_jogador_2, " fique sem jogar por 1 rodada.")
             //deve impedir que o jogador jogue o dado por 1 rodada
+            rodada_jogador_2_livre = rodada_jogador_2_livre+2
           }
           senao se(casa_jogador_2 == 8){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -302,6 +311,10 @@ programa {
         		pontuacao_jogador_2 ++
         		escreva ("\nvitoria ",nome_jogador_2)
                    	}
+          se (rodada_jogador_1_livre !=0){
+          	rodada_jogador_1_livre--
+          }
+          }
           }
       }
     }
