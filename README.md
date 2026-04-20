@@ -64,15 +64,7 @@ programa {
              escreva("\nrolando dado...")
           casa_jogador_1 = casa_jogador_1 + dado
           escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-          se(casa_jogador_1 == 4){
-            escreva("\nYoda:\nMuito a aprender você ainda tem.")
-          }
-          senao se(casa_jogador_1 == 5){
-            escreva("\nQui-Gon Jinn:\nSeu foco determina sua realidade.")
-          }
-          senao se(casa_jogador_1 == 6){
-            escreva("\nObi-Wan Kenobi:\nA Força é o que dá poder a um Jedi.")
-          }
+          escreva("\n...")
           }
           senao se(casa_jogador_1 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -229,15 +221,7 @@ programa {
              escreva("\nrolando dado...")
           casa_jogador_2 = casa_jogador_2 + dado
           escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
-          se(casa_jogador_2 == 4){
-            escreva("\nPalpatine:\nO lado sombrio da Força é um caminho para muitas habilidades que alguns consideram… não naturais.")
-          }
-          senao se(casa_jogador_2 == 5){
-            escreva("\nDarth Vader:\nO poder do lado sombrio é mais forte do que você imagina.")
-          }
-          senao se(casa_jogador_2 == 6){
-            escreva("\nPalpatine:\nSeu ódio o tornou poderoso.")
-          }
+          escreva("\n...")
           }
           senao se(casa_jogador_2 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -358,3 +342,4 @@ programa {
     }
   }
 }
+
