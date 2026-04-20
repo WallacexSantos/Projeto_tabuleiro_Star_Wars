@@ -48,12 +48,31 @@ programa {
             escreva("\n",nome_jogador_1, " avancou até a casa 5")
             casa_jogador_1 = casa_jogador_1 + 3
             //deve avançar o jogador para a casa 5 feito!!!
+            escreva("\nQui-Gon Jinn:\nSeu foco determina sua realidade.")
           }
           senao se(casa_jogador_1 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nAnakin Skywalker:\nÉ aqui que a diversão começa")
             escreva("\n",nome_jogador_1, " jogue um dado adicional de 3 lados: ")
             //deve jogar um dado adicional de 3 lados
+            escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+          leia(rolardado)
+          enquanto(rolardado != 1){
+             escreva("opcao incorreta, aperte 1 para rolar dado")
+          }    
+          dado = u.sorteia(1, 3)
+             escreva("\nrolando dado...")
+          casa_jogador_1 = casa_jogador_1 + dado
+          escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+          se(casa_jogador_1 == 4){
+            escreva("\nYoda:\nMuito a aprender você ainda tem.")
+          }
+          senao se(casa_jogador_1 == 5){
+            escreva("\nQui-Gon Jinn:\nSeu foco determina sua realidade.")
+          }
+          senao se(casa_jogador_1 == 6){
+            escreva("\nObi-Wan Kenobi:\nA Força é o que dá poder a um Jedi.")
+          }
           }
           senao se(casa_jogador_1 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -71,7 +90,7 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nObi-Wan Kenobi:\nSenti uma grande perturbação na Força…")
             escreva("\n",nome_jogador_1, " fique sem jogar por 1 rodada.")
-            //deve impedir que o jogador jogue o dado por 1 rodada
+            //deve impedir que o jogador jogue o dado por 1 rodada feito!!!
             rodada_jogador_1_livre = rodada_jogador_1_livre +2
           }
           senao se(casa_jogador_1 == 8){
@@ -194,12 +213,31 @@ programa {
             escreva("\n",nome_jogador_2, " avancou até a casa 5")
             casa_jogador_2 = casa_jogador_2 + 3
             //deve avançar o jogador para a casa 5 feito!!!
+            escreva("\nDarth Vader:\nO poder do lado sombrio é mais forte do que você imagina.")
           }
           senao se(casa_jogador_2 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nGeneral Grievous:\nIsso fará uma bela adição à minha coleção.")
             escreva("\n",nome_jogador_2, " jogue um dado adicional de 3 lados: ")
             //deve jogar um dado adicional de 3 lados
+            escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+          leia(rolardado)
+          enquanto(rolardado != 1){
+             escreva("opcao incorreta, aperte 1 para rolar dado")
+          }    
+          dado = u.sorteia(1, 3)
+             escreva("\nrolando dado...")
+          casa_jogador_2 = casa_jogador_2 + dado
+          escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+          se(casa_jogador_2 == 4){
+            escreva("\nPalpatine:\nO lado sombrio da Força é um caminho para muitas habilidades que alguns consideram… não naturais.")
+          }
+          senao se(casa_jogador_2 == 5){
+            escreva("\nDarth Vader:\nO poder do lado sombrio é mais forte do que você imagina.")
+          }
+          senao se(casa_jogador_2 == 6){
+            escreva("\nPalpatine:\nSeu ódio o tornou poderoso.")
+          }
           }
           senao se(casa_jogador_2 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -217,7 +255,7 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader:\nSua falta de fé é perturbadora.")
             escreva("\n",nome_jogador_2, " fique sem jogar por 1 rodada.")
-            //deve impedir que o jogador jogue o dado por 1 rodada
+            //deve impedir que o jogador jogue o dado por 1 rodada feito!!!
             rodada_jogador_2_livre = rodada_jogador_2_livre+2
           }
           senao se(casa_jogador_2 == 8){
