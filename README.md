@@ -113,7 +113,8 @@ programa {
             	escreva("\n2. Voltar 2 casas ")
             	leia(opcao_casa_15)
             	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
-            		escreva("\nopcao incorreta, digite novamente ")
+            		escreva("\nopcao incorreta, digite 1. Cantar Música e digite 2 para Voltar 2 casas ")
+            		leia (opcao_casa_15)
             	}
             	se(opcao_casa_15 == 1){
             		escreva("\ncante sua linda musica")
@@ -263,7 +264,8 @@ programa {
             	escreva("\n2. Voltar 2 casas ")
             	leia(opcao_casa_15)
             	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
-            		escreva("\nopcao incorreta, digite novamente ")
+            		escreva("\nopcao incorreta, digite 1. Cantar Música e digite 2 para Voltar 2 casas ")
+            		leia (opcao_casa_15)
             	}
             	se(opcao_casa_15 == 1){
             		escreva("\ncante sua linda musica")
@@ -329,4 +331,3 @@ programa {
     }
   }
 }
-
