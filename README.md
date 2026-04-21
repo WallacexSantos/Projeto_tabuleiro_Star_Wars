@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcaocasa15=0
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
@@ -107,25 +107,22 @@ programa {
             escreva("\nHan Solo:\nEu resolvo isso.")
           }
           senao se(casa_jogador_1 == 15){
-            faca{
             	escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             	escreva("\ncante um trecho de uma música na vida real, ou volte 2 casas")
             	escreva("\n1. Cantar Música ")
             	escreva("\n2. Voltar 2 casas ")
-            	leia(opcaocasa15)
-            	se(opcaocasa15 < 1 ou opcaocasa15 > 2){
+            	leia(opcao_casa_15)
+            	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
             		escreva("\nopcao incorreta, digite novamente ")
             	}
-            	se(opcaocasa15 == 1){
+            	se(opcao_casa_15 == 1){
             		escreva("\ncante sua linda musica")
             	}
-            	se(opcaocasa15 == 2){
+            	se(opcao_casa_15 == 2){
             		casa_jogador_1 = casa_jogador_1 - 2
             		escreva(nome_jogador_1, " voltou para casa ", casa_jogador_1)
             	}
             	//deve cantar um trecho de uma música (na vida real) ou voltar 2 casa FALTA A MUSICA
-            }
-            enquanto(opcaocasa15  < 1 ou opcaocasa15 > 2)
           }
           senao se(casa_jogador_1 == 16){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -260,25 +257,22 @@ programa {
             escreva("\nDarth Vader:\nIsso está sob controle.")
           }
           senao se(casa_jogador_2 == 15){
-            faca{
             	escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             	escreva("\ncante um trecho de uma música na vida real, ou volte 2 casas")
             	escreva("\n1. Cantar Música ")
             	escreva("\n2. Voltar 2 casas ")
-            	leia(opcaocasa15)
-            	se(opcaocasa15 < 1 ou opcaocasa15 > 2){
+            	leia(opcao_casa_15)
+            	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
             		escreva("\nopcao incorreta, digite novamente ")
             	}
-            	se(opcaocasa15 == 1){
+            	se(opcao_casa_15 == 1){
             		escreva("\ncante sua linda musica")
             	}
-            	se(opcaocasa15 == 2){
+            	se(opcao_casa_15 == 2){
             		casa_jogador_1 = casa_jogador_1 - 2
             		escreva(nome_jogador_2, " voltou para casa ", casa_jogador_2)
             	}
             	//deve cantar um trecho de uma música (na vida real) ou voltar 2 casa FALTA A MUSICA
-            }
-            enquanto(opcaocasa15  < 1 ou opcaocasa15 > 2)
           }
           senao se(casa_jogador_2 == 16){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -335,3 +329,4 @@ programa {
     }
   }
 }
+
