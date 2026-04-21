@@ -95,7 +95,7 @@ programa {
             escreva("\nLuke Skywalker:\nTenho um mau pressentimento sobre isso.")
             escreva("\n",nome_jogador_1, " retornou 1 casa.")
             casa_jogador_1 = casa_jogador_1 - 1
-            escreva("\n",nome_jogador_2, " está casa ", casa_jogador_2)
+            escreva("\n",nome_jogador_1, " está casa ", casa_jogador_1)
              //deve retroceder 1 casa feito!!!!
           }
           senao se(casa_jogador_1 == 13){
