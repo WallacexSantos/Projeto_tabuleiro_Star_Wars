@@ -84,6 +84,7 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nObi-Wan Kenobi:\nEra dito que você destruiria os Sith…")
             escreva("\n",nome_jogador_1, " trocou de casa com ",nome_jogador_2)
+              escreva("\nObi-Wan Kenobi:\nVocê era o escolhido!.")
             //deve trocar as casa em que os jogadores estão
           }
           senao se(casa_jogador_1 == 11){
@@ -96,6 +97,7 @@ programa {
             escreva("\n",nome_jogador_1, " retornou 1 casa.")
             casa_jogador_1 = casa_jogador_1 - 1
             escreva("\n",nome_jogador_1, " está casa ", casa_jogador_1)
+              escreva("\nYoda:\nSempre há mais a aprender.")
              //deve retroceder 1 casa feito!!!!
           }
           senao se(casa_jogador_1 == 13){
@@ -108,16 +110,16 @@ programa {
           }
           senao se(casa_jogador_1 == 15){
             	escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-            	escreva("\ncante um trecho de uma música na vida real, ou volte 2 casas")
-            	escreva("\n1. Cantar Música ")
+            	escreva("\nRecite uma frase de star wars na vida real ou volte 2 casas")
+            	escreva("\n1. Recitar frase ")
             	escreva("\n2. Voltar 2 casas ")
             	leia(opcao_casa_15)
             	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
-            		escreva("\nopcao incorreta, digite 1. Cantar Música e digite 2 para Voltar 2 casas ")
+            		escreva("\nopcao incorreta, digite 1. Recitar frase ou digite 2 para Voltar 2 casas ")
             		leia (opcao_casa_15)
             	}
             	se(opcao_casa_15 == 1){
-            		escreva("\ncante sua linda musica")
+            		escreva("\nRecite a frase: Que a força esteja com você.")
             	}
             	se(opcao_casa_15 == 2){
             		casa_jogador_1 = casa_jogador_1 - 2
@@ -142,30 +144,36 @@ programa {
             escreva("\nAdmiral Ackbar:\nÉ uma armadilha")
             escreva("\n",nome_jogador_1, " voltou para a casa 1.")
             casa_jogador_1 = 1
+            escreva("\nQue a força esteja com você.")
             //deve voltar para a casa 1 feito!!!
           }
           senao se(casa_jogador_1 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("\nYoda:\nDifícil de ver, o futuro é.")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_1 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("\nObi-Wan kenobi:\nSe você me derrubar, me tornarei mais poderoso do que pode imaginar.")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_1 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("\nLuke skywalker:\nNão lutarei com você, pai.")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_1 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_1 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("\nLuke Skywalker:\nEu sou um Jedi, como meu pai antes de mim.")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
@@ -235,6 +243,7 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader:\nJunte-se a mim, e juntos dominaremos a galáxia como pai e filho.")
             escreva("\n",nome_jogador_2, " trocou de casa com ",nome_jogador_1)
+            escreva("\nDarth Vader:\nEu vejo através das mentiras dos Jedi.")
             //deve trocar as casa em que os jogadores estão
           }
           senao se(casa_jogador_2 == 11){
@@ -247,6 +256,7 @@ programa {
             escreva("\n",nome_jogador_2, " retornou 1 casa.")
             casa_jogador_2 = casa_jogador_2 - 1
             escreva("\n",nome_jogador_2, " está casa ", casa_jogador_2)
+            escreva("\nCount Dooku:\nO lado sombrio revela a verdade.")
             //deve retroceder 1 casa feito!!!
           }
           senao se(casa_jogador_2 == 13){
@@ -259,16 +269,16 @@ programa {
           }
           senao se(casa_jogador_2 == 15){
             	escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
-            	escreva("\ncante um trecho de uma música na vida real, ou volte 2 casas")
-            	escreva("\n1. Cantar Música ")
+            	escreva("\nRecite uma frase de star wars na vida real ou volte 2 casas")
+            	escreva("\n1. Recitar frase ")
             	escreva("\n2. Voltar 2 casas ")
             	leia(opcao_casa_15)
             	enquanto(opcao_casa_15 < 1 ou opcao_casa_15 > 2){
-            		escreva("\nopcao incorreta, digite 1. Cantar Música e digite 2 para Voltar 2 casas ")
+            		escreva("\nopcao incorreta, digite 1. Recitar frase ou digite 2 para Voltar 2 casas ")
             		leia (opcao_casa_15)
             	}
             	se(opcao_casa_15 == 1){
-            		escreva("\ncante sua linda musica")
+            		escreva("\nRecite a frase: Não, eu sou sei pai")
             	}
             	se(opcao_casa_15 == 2){
             		casa_jogador_1 = casa_jogador_1 - 2
@@ -293,30 +303,36 @@ programa {
             escreva("\nPalpatine:\nSua ira o traiu.")
             escreva("\n",nome_jogador_2, " voltou para a casa 1.")
             casa_jogador_2 = 1
+            escreva("\nDarth Maul: \nFinalmente vamos nos revelar aos Jedi. Finalmente teremos vingança.")
             //deve voltar para a casa 1 feito!!!
           }
           senao se(casa_jogador_2 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("\nPalpatine: \nTudo está acontecendo como eu previ,")
             //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_2 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("\nDarth Vader: \nSeu poder é fraco.")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_2 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("\nDarth Vader: \nSe não quer lutar, então ira selar o seu destino..")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_2 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("\nDarth Vader: \nNão, eu sou sei pai")
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
