@@ -174,8 +174,7 @@ programa {
           senao se(casa_jogador_1 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nObi-Wan kenobi:\nSe você me derrubar, me tornarei mais poderoso do que pode imaginar.")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Você jogara um dado d4 na próxima rodada
           }
           senao se(casa_jogador_1 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -216,14 +215,12 @@ programa {
           senao se(casa_jogador_1 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
           senao se(casa_jogador_1 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLuke Skywalker:\nEu sou um Jedi, como meu pai antes de mim.")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Só avança se tirar um número par
           }
           senao se(casa_jogador_1 >= 25){
             escreva("voce andou " ,dado, " casas, e está na casa 25")
@@ -381,8 +378,7 @@ programa {
           senao se(casa_jogador_2 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nSeu poder é fraco.")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Você jogara um dado d4 na próxima rodada
           }
           senao se(casa_jogador_2 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -423,14 +419,12 @@ programa {
           senao se(casa_jogador_2 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão, eu sou sei pai")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                        //Só avança se tirar um número par
           }
           senao se(casa_jogador_2 >= 25){
             escreva("voce andou " ,dado, " casas, e está na casa 25")
