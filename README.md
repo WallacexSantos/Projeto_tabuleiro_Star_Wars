@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
@@ -150,8 +150,26 @@ programa {
           senao se(casa_jogador_1 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nYoda:\nDifícil de ver, o futuro é.")
+            escreva("\nvoce deve jogar um dado adicional, se cair um numero par voce deve manter na casa, se cair um numero impar deve retroceder 3 casas " )
+              faca{
+          escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+          leia(rolardado)
+          se(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+          }
+        }
+        enquanto(rolardado != 1)
+        dado = u.sorteia(1, 6)
+        escreva("\nrolando dado...")
+        escreva(dado, "\n")
+              se  ( dado==2 ou dado==4 ou dado==6 ) {
+              escreva("parabens voce se manteve na casa " , casa_jogador_1)
+              } senao {
+              casa_jogador_1 = casa_jogador_1-3 
+                escreva("voce voltou para a casa " , casa_jogador_1)
                         //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
+              }
           }
           senao se(casa_jogador_1 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -162,8 +180,38 @@ programa {
           senao se(casa_jogador_1 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLuke skywalker:\nNão lutarei com você, pai.")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+            escreva("Dois jogadores deverao jogar um dado, quem tirar o menor numero devera voltar 4 casa ")
+            escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+            leia(rolardado)
+            enquanto(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+            leia(rolardado)
+            }
+             dado_jogador_1_casa_22 = u.sorteia(1, 6)
+             escreva("\nrolando dado...")
+             escreva(dado_jogador_1_casa_22, "\n")
+            escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+            leia(rolardado)
+            enquanto(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+            leia(rolardado)
+            }
+             dado_jogador_2_casa_22 = u.sorteia(1, 6)
+             escreva("\nrolando dado...")
+             escreva(dado_jogador_2_casa_22, "\n")
+             se (dado_jogador_2_casa_22 > dado_jogador_1_casa_22){
+             casa_jogador_1 = casa_jogador_1-4
+             escreva (nome_jogador_2 ,"venceu o duelo")
+             escreva ("\n", nome_jogador_1 ,"voltou 4 casas e esta na casa ",casa_jogador_1)
+             }
+             senao se (dado_jogador_2_casa_22 < dado_jogador_1_casa_22){
+             casa_jogador_1 = casa_jogador_1-4
+             escreva (nome_jogador_1 ," venceu o duelo")
+             escreva ("\n", nome_jogador_2 ," voltou 4 casas e esta na casa ",casa_jogador_1)
+          }
+          senao{
+          	escreva ("Empate, os dois se mantiveram na mesma casa")
+          }
           }
           senao se(casa_jogador_1 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -178,7 +226,7 @@ programa {
 //própria equipe
           }
           senao se(casa_jogador_1 >= 25){
-            escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+            escreva("voce andou " ,dado, " casas, e está na casa 25")
             escreva("\nYoda:\nUm Jedi você se tornou.")
             pontuacao_jogador_1 ++
         		escreva ("\nvitoria ",nome_jogador_1)
@@ -309,8 +357,26 @@ programa {
           senao se(casa_jogador_2 == 20){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nPalpatine: \nTudo está acontecendo como eu previ,")
+            escreva("\nvoce deve jogar um dado adicional, se cair um numero par voce deve manter na casa, se cair um numero impar deve retroceder 3 casas " )
+           faca{
+          escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+          leia(rolardado)
+          se(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+          }
+        }
+        enquanto(rolardado != 1)
+        dado = u.sorteia(1, 6)
+        escreva("\nrolando dado...")
+        escreva(dado, "\n")
+        se  ( dado==1 ou dado==3 ou dado==5 ) {
+              escreva("parabens voce se manteve na casa " , casa_jogador_2)
+              } senao {
+                  casa_jogador_2 =casa_jogador_2-3
+                escreva("voce voltou para a casa " , casa_jogador_2)
             //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
+          }
           }
           senao se(casa_jogador_2 == 21){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -321,8 +387,38 @@ programa {
           senao se(casa_jogador_2 == 22){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nSe não quer lutar, então ira selar o seu destino..")
-                        //o grupo deve escolher e implementar funcionalidades propostas pela
-//própria equipe
+                 escreva("Dois jogadores deverao jogar um dado, quem tirar o menor numero devera voltar 4 casa ")
+            escreva( "\n" ,nome_jogador_2, " digite 1 para rolar o dado: ")
+            leia(rolardado)
+            enquanto(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+            leia(rolardado)
+            }
+             dado_jogador_2_casa_22 = u.sorteia(1, 6)
+             escreva("\nrolando dado...")
+             escreva(dado_jogador_2_casa_22, "\n")
+            escreva( "\n" ,nome_jogador_1, " digite 1 para rolar o dado: ")
+            leia(rolardado)
+            enquanto(rolardado != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+            leia(rolardado)
+            }
+             dado_jogador_1_casa_22 = u.sorteia(1, 6)
+             escreva("\nrolando dado...")
+             escreva(dado_jogador_1_casa_22, "\n")
+             se (dado_jogador_2_casa_22 > dado_jogador_1_casa_22){
+             casa_jogador_1 = casa_jogador_1-4
+             escreva (nome_jogador_2 ," venceu o duelo")
+             escreva ("\n", nome_jogador_1 ," voltou 4 casas e esta na casa ",casa_jogador_1)
+             }
+             senao se (dado_jogador_2_casa_22 < dado_jogador_1_casa_22){
+             casa_jogador_1 = casa_jogador_1-4
+             escreva (nome_jogador_1 ,"venceu o duelo")
+             escreva ("\n", nome_jogador_2 ,"voltou 4 casas e esta na casa ",casa_jogador_1)
+          }
+          senao{
+          	escreva ("Empate, os dois se mantiveram na mesma casa")
+          }
           }
           senao se(casa_jogador_2 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -337,7 +433,7 @@ programa {
 //própria equipe
           }
           senao se(casa_jogador_2 >= 25){
-            escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+            escreva("voce andou " ,dado, " casas, e está na casa 25")
             escreva("\nPalpatine:\nSua jornada para o lado sombrio está completa.")
         		pontuacao_jogador_2 ++
         		escreva ("\nvitoria ",nome_jogador_2)
