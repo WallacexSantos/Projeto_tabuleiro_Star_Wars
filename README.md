@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2=011
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2=011,rolardado_casa15
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     faca{
       escreva("BEM VINDO AO TABULEIRO STAR WARS")
@@ -217,17 +217,23 @@ programa {
             escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
              
             se (casa_jogador_1==23){
-                      
-                dado = u.sorteia(1,6)
-                  dado_2 = u.sorteia(1, 6)
-                      soma = dado + dado_2
-                      casa_jogador_1 = casa_jogador_1 - soma
-      		  escreva("\nrolando dado...")
-       			 escreva(dado, "\n")
-     		   escreva("\nrolando dado...")
+            	 escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+        		 leia(rolardado_casa15)
+        		 se(rolardado_casa15==1){
+            		dado = u.sorteia(1,6)
+                 	dado_2 = u.sorteia(1, 6)
+                    soma = dado + dado_2
+                    casa_jogador_1 = casa_jogador_1 - soma
+      		  	escreva("\nrolando dado...")
+       			escreva(dado, "\n")
+     		   	escreva("\nrolando dado...")
      			escreva(dado_2, "\n")
-       			 leia(dado_2)
-     			 escreva("\n soma e :", soma )
+       			leia(dado_2)
+     			escreva("\n soma e :", soma )    
+        		 }
+          se(rolardado_casa15 != 1){
+            escreva("opcao incorreta, aperte 1 para rolar dado")
+          }
     	   
                   }
                         //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
@@ -436,15 +442,22 @@ programa {
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
                            
                 se (casa_jogador_2==23){
-                  	dado = u.sorteia(1, 6)
-                  	dado_2 = u.sorteia(1, 6)
+                  	escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+        		 	leia(rolardado_casa15)
+        		 se(rolardado_casa15==1){
+            		dado = u.sorteia(1,6)
+                 	dado_2 = u.sorteia(1, 6)
                     soma = dado + dado_2
-       			escreva("\nrolando dado...")
-				escreva(dado, "\n")
-				escreva("\nrolando dado...")
-        			escreva(dado_2, "\n")
-          		leia(dado_2)
-       			escreva("\n soma e :", soma )
+                    casa_jogador_2 = casa_jogador_2 - soma
+      		  	escreva("\nrolando dado...")
+       			escreva(dado, "\n")
+     		   	escreva("\nrolando dado...")
+     			escreva(dado_2, "\n")
+       			leia(dado_2)
+     			escreva("\n soma e :", soma )    
+        		 }senao se(rolardado_casa15 != 1){
+            		escreva("opcao incorreta, aperte 1 para rolar dado")
+         		 }
                //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
                }
           senao se(casa_jogador_2 == 24){
