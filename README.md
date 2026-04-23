@@ -228,7 +228,7 @@ programa {
      escreva(dado_2, "\n")
          leia(dado_2)
       escreva("\n soma e :", soma )
-       leia(soma)
+       
                   }
                         //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
@@ -445,7 +445,7 @@ programa {
         escreva(dado_2, "\n")
           leia(dado_2)
         escreva("\n soma e :", soma )
-          leia(soma)          
+                   
                            //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
           senao se(casa_jogador_2 == 24){
