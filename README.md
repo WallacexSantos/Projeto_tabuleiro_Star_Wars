@@ -222,13 +222,13 @@ programa {
                   dado_2 = u.sorteia(1, 6)
                       soma = dado + dado_2
                       casa_jogador_1 = casa_jogador_1 - soma
-        escreva("\nrolando dado...")
-        escreva(dado, "\n")
-        escreva("\nrolando dado...")
-     escreva(dado_2, "\n")
-         leia(dado_2)
-      escreva("\n soma e :", soma )
-       
+      		  escreva("\nrolando dado...")
+       			 escreva(dado, "\n")
+     		   escreva("\nrolando dado...")
+     			escreva(dado_2, "\n")
+       			 leia(dado_2)
+     			 escreva("\n soma e :", soma )
+    	   
                   }
                         //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
@@ -385,7 +385,7 @@ programa {
               escreva("parabens voce se manteve na casa " , casa_jogador_2)
               } senao {
                   casa_jogador_2 =casa_jogador_2-3
-                escreva("voce voltou para a casa " , casa_jogador_2)
+                  escreva("voce voltou para a casa " , casa_jogador_2)
             //o grupo deve escolher e implementar funcionalidades propostas pela
 //própria equipe
           }
@@ -435,19 +435,18 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
                            
-                  se (casa_jogador_2==23){
+                se (casa_jogador_2==23){
                   	dado = u.sorteia(1, 6)
-                  	  dado_2 = u.sorteia(1, 6)
-                       soma = dado + dado_2
-        escreva("\nrolando dado...")
-        escreva(dado, "\n")
-       escreva("\nrolando dado...")
-        escreva(dado_2, "\n")
-          leia(dado_2)
-        escreva("\n soma e :", soma )
-                   
-                           //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
-          }
+                  	dado_2 = u.sorteia(1, 6)
+                    soma = dado + dado_2
+       			escreva("\nrolando dado...")
+				escreva(dado, "\n")
+				escreva("\nrolando dado...")
+        			escreva(dado_2, "\n")
+          		leia(dado_2)
+       			escreva("\n soma e :", soma )
+               //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
+               }
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão, eu sou sei pai")
