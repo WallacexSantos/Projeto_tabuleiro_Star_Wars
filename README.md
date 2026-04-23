@@ -215,7 +215,7 @@ programa {
           senao se(casa_jogador_1 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
-               casa_jogador_1 = casa_jogador_1-dado * 2
+               casa_jogador_1 = casa_jogador_1-dado+dado
                 soma = dado + dado
                   se (casa_jogador_1==23){
                              soma = dado + dado
@@ -428,7 +428,7 @@ programa {
           senao se(casa_jogador_2 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
-                        casa_jogador_1 = casa_jogador_1-dado * 2
+                        casa_jogador_2 = casa_jogador_2-dado + dado
                   se (casa_jogador_1==23){
                   	       soma= dado + dado
                   	       casa_jogador_2 = casa_jogador_2 - dado + dado
@@ -438,12 +438,7 @@ programa {
         escreva(dado, "\n")
         casa_jogador_1 = casa_jogador_1 - dado + dado
                   
-                  	          dado = u.sorteia(1, 6)
-        escreva("\nrolando dado...")
-        escreva(dado, "\n")
-        casa_jogador_2 = casa_jogador_2 - soma
-                  }
-                        //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
+                           //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
