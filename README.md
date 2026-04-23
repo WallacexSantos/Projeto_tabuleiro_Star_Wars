@@ -215,8 +215,7 @@ programa {
           senao se(casa_jogador_1 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
-             
-            se (casa_jogador_1==23){
+           escreva ("\nNessa casa você deverá jogar dois dados, a soma dos dados serão as casas que você deve retroceder")
             	 escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
         		 leia(rolardado_casa15)
         		 se(rolardado_casa15==1){
@@ -229,13 +228,13 @@ programa {
      		   	escreva("\nrolando dado...")
      			escreva(dado_2, "\n")
        			leia(dado_2)
-     			escreva("\n soma e :", soma )    
+     			escreva("\n", nome_jogador_1  ," devera retroceder ", soma," casas")    
         		 }
           se(rolardado_casa15 != 1){
             escreva("opcao incorreta, aperte 1 para rolar dado")
           }
     	   
-                  }
+                  
                         //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
           }
           senao se(casa_jogador_1 == 24){
@@ -440,8 +439,7 @@ programa {
           senao se(casa_jogador_2 == 23){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
-                           
-                se (casa_jogador_2==23){
+            escreva ("\nNessa casa você deverá jogar dois dados, a soma dos dados serão as casas que você deve retroceder")
                   	escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
         		 	leia(rolardado_casa15)
         		 se(rolardado_casa15==1){
@@ -454,12 +452,12 @@ programa {
      		   	escreva("\nrolando dado...")
      			escreva(dado_2, "\n")
        			leia(dado_2)
-     			escreva("\n soma e :", soma )    
+     			escreva("\n", nome_jogador_2  ," devera retroceder ", soma," casas")    
         		 }senao se(rolardado_casa15 != 1){
             		escreva("opcao incorreta, aperte 1 para rolar dado")
          		 }
                //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
-               }
+               
           senao se(casa_jogador_2 == 24){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão, eu sou sei pai")
@@ -477,3 +475,4 @@ programa {
   }
   }
  }
+
