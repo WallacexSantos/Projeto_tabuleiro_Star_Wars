@@ -1,14 +1,31 @@
 programa {
   inclua biblioteca Util --> u
+  inclua biblioteca Util --> a
   funcao inicio() {
     inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2=011,rolardado_casa15
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
+    a.aguarde(2000)
+    escreva("\n░██████╗████████╗░█████╗░██████╗░  ░██╗░░░░░░░██╗░█████╗░██████╗░░██████╗")
+    a.aguarde(2000)
+    escreva("\n██╔════╝╚══██╔══╝██╔══██╗██╔══██╗  ░██║░░██╗░░██║██╔══██╗██╔══██╗██╔════╝")
+    a.aguarde(2000)
+    escreva("\n╚█████╗░░░░██║░░░███████║██████╔╝  ░╚██╗████╗██╔╝███████║██████╔╝╚█████╗░")
+    a.aguarde(2000)
+    escreva("\n░╚═══██╗░░░██║░░░██╔══██║██╔══██╗  ░░████╔═████║░██╔══██║██╔══██╗░╚═══██╗")
+    a.aguarde(2000)
+    escreva("\n██████╔╝░░░██║░░░██║░░██║██║░░██║  ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██████╔╝")
+    a.aguarde(2000)
+    escreva("\n╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░")
+    a.aguarde(2000)
+    limpa()
     faca{
-      escreva("BEM VINDO AO TABULEIRO STAR WARS")
-      escreva("\n1. TECLE 1 PARA Jogar")
-      escreva("\n2. Verificar placar")
-      escreva("\n3. Fechar o Jogo ")
-      escreva("\n ")
+  escreva("=====================================\n")
+        escreva("_________TABULEIRO STAR WARS_________\n")
+        escreva("=====================================\n")
+        escreva(" Digite [1] Jogar\n")
+        escreva(" DIgite [2] Verificar Placar\n")
+        escreva(" Digite [3] Sair do Jogo\n")
+        escreva("=====================================\n")
       leia(opcao)
       se (opcao  < 1 ou opcao > 3){ 
         escreva("opção invalida, digite novamente: ")
