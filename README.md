@@ -1,22 +1,21 @@
 programa {
   inclua biblioteca Util --> u
-  inclua biblioteca Util --> a
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2=011,rolardado_casa15
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n░██████╗████████╗░█████╗░██████╗░  ░██╗░░░░░░░██╗░█████╗░██████╗░░██████╗")
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n██╔════╝╚══██╔══╝██╔══██╗██╔══██╗  ░██║░░██╗░░██║██╔══██╗██╔══██╗██╔════╝")
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n╚█████╗░░░░██║░░░███████║██████╔╝  ░╚██╗████╗██╔╝███████║██████╔╝╚█████╗░")
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n░╚═══██╗░░░██║░░░██╔══██║██╔══██╗  ░░████╔═████║░██╔══██║██╔══██╗░╚═══██╗")
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n██████╔╝░░░██║░░░██║░░██║██║░░██║  ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██████╔╝")
-    a.aguarde(2000)
+    u.aguarde(2000)
     escreva("\n╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░")
-    a.aguarde(2000)
+    u.aguarde(2000)
     limpa()
     faca{
   escreva("=====================================\n")
@@ -63,13 +62,24 @@ programa {
             escreva("\nObi-Wan Kenobi: \nA Força estará com você. Sempre!!")
             escreva("\n",nome_jogador_1, " avancou até a casa 5")
             casa_jogador_1 = casa_jogador_1 + 3
+            escreva("\nQui-Gon Jinn:\nSeu foco determina sua realidade.")
             //deve avançar o jogador para a casa 5 feito!!!
           }
           senao se(casa_jogador_1 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nAnakin Skywalker:\nÉ aqui que a diversão começa")
             escreva("\n",nome_jogador_1, " jogue um dado adicional de 3 lados: ")
-            //deve jogar um dado adicional de 3 lados
+               //deve jogar um dado adicional de 3 lados
+               escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+               leia(rolardado)
+            	enquanto(rolardado != 1){
+            		escreva("opcao incorreta, aperte 1 para rolar dado")
+          	}    
+               dado = u.sorteia(1, 3)
+               escreva("\nrolando dado...")
+               casa_jogador_1 = casa_jogador_1 + dado
+               escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+               escreva("\n...")
           }
           senao se(casa_jogador_1 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -102,7 +112,9 @@ programa {
             escreva("\nObi-Wan Kenobi:\nEra dito que você destruiria os Sith…")
             escreva("\n",nome_jogador_1, " trocou de casa com ",nome_jogador_2)
               escreva("\nObi-Wan Kenobi:\nVocê era o escolhido!.")
-            //deve trocar as casa em que os jogadores estão
+              casa_vazia = casa_jogador_1
+              casa_jogador_1 = casa_jogador_2
+              casa_jogador_2 = casa_vazia
           }
           senao se(casa_jogador_1 == 11){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -287,12 +299,23 @@ programa {
             escreva("\n",nome_jogador_2, " avancou até a casa 5")
             casa_jogador_2 = casa_jogador_2 + 3
             //deve avançar o jogador para a casa 5 feito!!!
+            escreva("\nDarth Vader:\nO poder do lado sombrio é mais forte do que você imagina.")
           }
           senao se(casa_jogador_2 == 3){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nGeneral Grievous:\nIsso fará uma bela adição à minha coleção.")
             escreva("\n",nome_jogador_2, " jogue um dado adicional de 3 lados: ")
-            //deve jogar um dado adicional de 3 lados
+               //deve jogar um dado adicional de 3 lados
+               escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+               leia(rolardado)
+            	enquanto(rolardado != 1){
+            		escreva("opcao incorreta, aperte 1 para rolar dado")
+          	}    
+               dado = u.sorteia(1, 3)
+               escreva("\nrolando dado...")
+               casa_jogador_2 = casa_jogador_2 + dado
+               escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+               escreva("\n...")
           }
           senao se(casa_jogador_2 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -325,7 +348,9 @@ programa {
             escreva("\nDarth Vader:\nJunte-se a mim, e juntos dominaremos a galáxia como pai e filho.")
             escreva("\n",nome_jogador_2, " trocou de casa com ",nome_jogador_1)
             escreva("\nDarth Vader:\nEu vejo através das mentiras dos Jedi.")
-            //deve trocar as casa em que os jogadores estão
+              casa_vazia = casa_jogador_1
+              casa_jogador_1 = casa_jogador_2
+              casa_jogador_2 = casa_vazia
           }
           senao se(casa_jogador_2 == 11){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
