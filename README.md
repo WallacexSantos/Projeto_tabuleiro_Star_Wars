@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0
+    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22 , soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
     u.aguarde(2000)
     escreva("\n░██████╗████████╗░█████╗░██████╗░  ░██╗░░░░░░░██╗░█████╗░██████╗░░██████╗")
@@ -33,15 +33,17 @@ programa {
     enquanto(opcao  < 1 ou opcao > 3)
     limpa()
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
-    se (opcao == 1) 
+    se (opcao == 1){ 
       se (nome == 0) { nome++
         escreva("Digite o nome do jogador 1: ")
         leia(nome_jogador_1)
         escreva("Digite o nome do jogador 2: ")
         leia(nome_jogador_2)
+      }
     }
     se (opcao == 1) {
       enquanto(casa_jogador_1 <25 e casa_jogador_2 <25){
+       se ( rodada_jogador_1_livre == 0 ) {
         faca{
           escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
           leia(rolardado)
@@ -94,10 +96,11 @@ programa {
             escreva("\nObi-Wan Kenobi:\nA Força é o que dá poder a um Jedi.")
           }
           senao se(casa_jogador_1 == 7){
-            escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-            escreva("\nObi-Wan Kenobi:\nSenti uma grande perturbação na Força…")
-            escreva("\n",nome_jogador_1, " fique sem jogar por 1 rodada.")
-            //deve impedir que o jogador jogue o dado por 1 rodada
+           escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+               escreva("\nObi-Wan Kenobi:\nSenti uma grande perturbação na Força…")
+               escreva("\n",nome_jogador_1, " fique sem jogar por 1 rodada.")
+               //deve impedir que o jogador jogue o dado por 1 rodada feito!!!
+               rodada_jogador_1_livre = rodada_jogador_1_livre +2
           }
           senao se(casa_jogador_1 == 8){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
@@ -229,8 +232,8 @@ programa {
              escreva(dado_jogador_2_casa_22, "\n")
              se (dado_jogador_2_casa_22 > dado_jogador_1_casa_22){
              casa_jogador_1 = casa_jogador_1-4
-             escreva (nome_jogador_2 ,"venceu o duelo")
-             escreva ("\n", nome_jogador_1 ,"voltou 4 casas e esta na casa ",casa_jogador_1)
+             escreva (nome_jogador_2 ," venceu o duelo")
+             escreva ("\n", nome_jogador_1 ," voltou 4 casas e esta na casa ",casa_jogador_1)
              }
              senao se (dado_jogador_2_casa_22 < dado_jogador_1_casa_22){
              casa_jogador_1 = casa_jogador_1-4
@@ -276,8 +279,12 @@ programa {
             pontuacao_jogador_1 ++
         		escreva ("\nvitoria ",nome_jogador_1)
           }
+          se (rodada_jogador_2_livre !=0){
+          	rodada_jogador_2_livre--
+          }
+          }
           se (casa_jogador_1 <25)
-          {
+          se (rodada_jogador_2_livre == 0 ) {
         faca{
           escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
           leia(rolardado)
@@ -333,7 +340,8 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader:\nSua falta de fé é perturbadora.")
             escreva("\n",nome_jogador_2, " fique sem jogar por 1 rodada.")
-            //deve impedir que o jogador jogue o dado por 1 rodada
+            //deve impedir que o jogador jogue o dado por 1 rodada feito!!!
+            rodada_jogador_2_livre = rodada_jogador_2_livre+2
           }
           senao se(casa_jogador_2 == 8){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -470,8 +478,8 @@ programa {
              }
              senao se (dado_jogador_2_casa_22 < dado_jogador_1_casa_22){
              casa_jogador_1 = casa_jogador_1-4
-             escreva (nome_jogador_1 ,"venceu o duelo")
-             escreva ("\n", nome_jogador_2 ,"voltou 4 casas e esta na casa ",casa_jogador_1)
+             escreva (nome_jogador_1 ," venceu o duelo")
+             escreva ("\n", nome_jogador_2 ," voltou 4 casas e esta na casa ",casa_jogador_1)
           }
           senao{
           	escreva ("Empate, os dois se mantiveram na mesma casa")
@@ -496,6 +504,7 @@ programa {
         		 }senao se(rolardado_casa15 != 1){
             		escreva("opcao incorreta, aperte 1 para rolar dado")
          		 }
+          }
                //Você deve jogar dois dados, o tanto que sair, você deverá retroceder as casas
                
           senao se(casa_jogador_2 == 24){
@@ -509,9 +518,12 @@ programa {
         		pontuacao_jogador_2 ++
         		escreva ("\nvitoria ",nome_jogador_2)
                    	}
+                   se (rodada_jogador_1_livre !=0){
+          	    rodada_jogador_1_livre--
           }
-      }
-    }
+          }
+      }     
   }
   }
  }
+
