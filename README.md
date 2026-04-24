@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0
+    inteiro opcao=1, nome=0, rolardado, dado = 0, casa_jogador_1=0, casa_jogador_2=0
     inteiro pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22
     inteiro soma ,dado_2 = 0 ,rolardado_casa23, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0, dado_4_lados_j1=0, dado_4_lados_j2=0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
