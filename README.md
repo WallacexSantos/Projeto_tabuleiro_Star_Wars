@@ -32,7 +32,7 @@ programa {
       }
     }
     enquanto(opcao  < 1 ou opcao > 3)
-
+    limpa()
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
     se (opcao == 1) 
       se (nome == 0) { nome++
