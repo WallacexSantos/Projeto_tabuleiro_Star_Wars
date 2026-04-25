@@ -30,11 +30,11 @@ programa {
         escreva(" Digite [3] Créditos\n")
         escreva("=====================================\n")
       leia(opcao)
-      se (opcao  < 1 ou opcao > 3){ 
+      se (opcao  < 1 ou opcao > 4){ 
         escreva("opção invalida, digite novamente: ")
       }
     }
-    enquanto(opcao  < 1 ou opcao > 3)
+    enquanto(opcao  < 1 ou opcao > 4)
     limpa()
     }
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
@@ -809,6 +809,10 @@ enquanto (opcao <0 e opcao >1){
       limpa()
 
   }
+  se (opcao == 4) {
+   menu++
+  }
+  }
  }
 }
-}
+
