@@ -590,6 +590,17 @@ programa {
           }
       }     
   }
+  se (opcao == 2){
+  escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1)
+  escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2)
+  escreva ("\nDigite [0] para retornar ao menu ")
+  leia (opcao)
+  enquanto (opcao !=0){ 
+        escreva("opção invalida, Digite [0] para retornar ao menu: ")
+        leia (opcao)
+      }
+      limpa()
+  }
   }
  }
 }
