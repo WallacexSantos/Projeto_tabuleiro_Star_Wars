@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=1, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0
+    inteiro opcao=0, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, menu = 0
     inteiro pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22
     inteiro soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0, dado_4_lados_j1=0, dado_4_lados_j2=0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
@@ -19,8 +19,10 @@ programa {
     escreva("\n╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░")
     u.aguarde(2000)
     limpa()
+    enquanto(menu == 0){
+    enquanto (opcao == 0){
     faca{
-  escreva("=====================================\n")
+  escreva("\n=====================================\n")
         escreva("_________TABULEIRO STAR WARS_________\n")
         escreva("=====================================\n")
         escreva(" Digite [1] Jogar\n")
@@ -34,6 +36,7 @@ programa {
     }
     enquanto(opcao  < 1 ou opcao > 3)
     limpa()
+    }
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
     se (opcao == 1){ 
       se (nome == 0) { nome++
@@ -44,6 +47,8 @@ programa {
       }
     }
     se (opcao == 1) {
+      casa_jogador_1 = 0
+      casa_jogador_2 = 0
       enquanto(casa_jogador_1 <25 e casa_jogador_2 <25){
        se ( rodada_jogador_1_livre == 0 ) {
         faca{
@@ -307,6 +312,9 @@ programa {
             escreva("\nYoda:\nUm Jedi você se tornou.")
             pontuacao_jogador_1 ++
         		escreva ("\nvitoria ",nome_jogador_1)
+            u.aguarde(2000)
+            opcao = 0
+          
           }
           se (rodada_jogador_2_livre !=0){
           	rodada_jogador_2_livre--
@@ -572,6 +580,9 @@ programa {
             escreva("\nPalpatine:\nSua jornada para o lado sombrio está completa.")
         		pontuacao_jogador_2 ++
         		escreva ("\nvitoria ",nome_jogador_2)
+            u.aguarde(2000)
+            opcao = 0
+        
                    	}
                    se (rodada_jogador_1_livre !=0){
           	    rodada_jogador_1_livre--
@@ -581,3 +592,4 @@ programa {
   }
   }
  }
+}
