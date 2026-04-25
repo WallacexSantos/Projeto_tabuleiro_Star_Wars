@@ -634,13 +634,25 @@ programa {
       }     
   }
   se (opcao == 2){
-  escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1)
-  escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2)
-  escreva ("\nDigite [0] para retornar ao menu ")
-  leia (opcao)
-  enquanto (opcao !=0){ 
+  	escreva("\n==============================================================")
+  	escreva("\n____________________________PLACAR____________________________")
+  	escreva ("\n\n",nome_jogador_1," ", pontuacao_jogador_1," vitórias")
+  	escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2," vitórias")
+  	se (pontuacao_jogador_1 == pontuacao_jogador_2){
+  	   escreva("\nA Força está em equilíbrio")
+  	}
+  	senao se (pontuacao_jogador_1 > pontuacao_jogador_2){
+  	   escreva("\nA Força tende para a luz.")
+  	}
+  	senao se (pontuacao_jogador_1 < pontuacao_jogador_2){
+  	   escreva("\nO lado sombrio está dominando.")
+  	}
+  	escreva ("\nDigite [0] para retornar ao menu ")
+  	leia (opcao)
+  	enquanto (opcao !=0){ 
         escreva("opção invalida, Digite [0] para retornar ao menu: ")
         leia (opcao)
+    escreva("\n==============================================================")
       }
       limpa()
   }
