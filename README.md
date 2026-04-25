@@ -89,9 +89,10 @@ programa {
           	}    
                dado = u.sorteia(1, 3)
                escreva("\nrolando dado...")
+               escreva(dado, "\n")
                casa_jogador_1 = casa_jogador_1 + dado
                escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-               escreva("\n...")
+               
           }
           senao se(casa_jogador_1 == 4){
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
