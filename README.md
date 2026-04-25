@@ -22,7 +22,7 @@ programa {
     enquanto(menu == 0){
     enquanto (opcao == 0){
     faca{
-  escreva("\n=====================================\n")
+        escreva("\n===================================\n")
         escreva("_________TABULEIRO STAR WARS_________\n")
         escreva("=====================================\n")
         escreva(" Digite [1] Jogar              Digite [4] Sair do Jogo\n")
@@ -40,10 +40,14 @@ programa {
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
     se (opcao == 1){ 
       se (nome == 0) { nome++
-        escreva("Digite o nome do jogador 1: ")
+        escreva("==============================================================")
+        escreva("\nCada jogador deve escolher seu nome e destino: JEDI ou SITH")
+        escreva("\nEssa escolha definirá o seu caminho e não pode ser desfeita")
+        escreva("\nJogador 1 (JEDI). Digite o seu nome: ")
         leia(nome_jogador_1)
-        escreva("Digite o nome do jogador 2: ")
+        escreva("\nJogador 2 (SiTH). Digite o seu nome: ")
         leia(nome_jogador_2)
+        escreva("==============================================================")
       }
     }
     se (opcao == 1) {
