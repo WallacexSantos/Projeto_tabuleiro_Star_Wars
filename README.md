@@ -1,7 +1,7 @@
 programa {
   inclua biblioteca Util --> u
   funcao inicio() {
-    inteiro opcao=0, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, menu = 0
+    inteiro opcao=0, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, menu = 0, EPISODE = 1
     inteiro pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22
     inteiro soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0, dado_4_lados_j1=0, dado_4_lados_j2=0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
@@ -48,6 +48,43 @@ programa {
         escreva("\nJogador 2 (SiTH). Digite o seu nome: ")
         leia(nome_jogador_2)
         escreva("==============================================================")
+      }
+      se (opcao == 1){
+          escreva("\n        █████████████████████████")
+		escreva("\n        █─▄▄▄▄█─▄─▄─██▀▄─██▄─▄▄▀█")
+		escreva("\n        █▄▄▄▄─███─████─▀─███─▄─▄█")
+		escreva("\n        ▀▄▄▄▄▄▀▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▀")
+		escreva("\n      █████████████████████████████")
+		escreva("\n      █▄─█▀▀▀█─▄██▀▄─██▄─▄▄▀█─▄▄▄▄█")
+		escreva("\n      ██─█─█─█─███─▀─███─▄─▄█▄▄▄▄─█")
+		escreva("\n      ▀▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀")
+		u.aguarde(2000)
+		escreva("\n                BOARD GAME          ")
+		u.aguarde(500)
+		escreva("\n                 EPISODE ",EPISODE,"          ")
+		u.aguarde(500)
+		escreva("\nHá muito tempo, em uma galáxia muito, muito distante...")
+		u.aguarde(500)
+		escreva("\n\nA galáxia vive um momento de tensão.")
+		escreva("\nDois caminhos se erguem diante daqueles sensíveis à Força:  .")
+		u.aguarde(500)
+		escreva("\no caminho da luz, seguido pelos nobres Jedi,  ")
+		u.aguarde(500)
+		escreva("\ne o caminho da escuridão, dominado pelos poderosos Sith.")
+		u.aguarde(500)
+		escreva("\n\nEm meio a esse conflito, dois destinos começam a se cruzar.")
+		u.aguarde(500)
+		escreva("\nDe um lado, ",nome_jogador_1," trilhando o caminho da luz.  ")
+		u.aguarde(500)
+		escreva("\nDo outro, ",nome_jogador_2," abraçando o poder do lado sombrio.")
+		u.aguarde(500)
+		escreva("\n\nCada decisão poderá alterar o rumo da jornada,")
+		u.aguarde(500)
+		escreva("\ne cada passo pode aproximá-los da vitória… ou da queda.")
+		u.aguarde(500)
+		escreva("\nEscolha seu caminho... e que a Força esteja com você.")
+		u.aguarde(500)
+		escreva("\n==============================================================")
       }
     }
     se (opcao == 1) {
@@ -315,6 +352,7 @@ programa {
             escreva("voce andou " ,dado, " casas, e está na casa 25")
             escreva("\nYoda:\nUm Jedi você se tornou.")
             pontuacao_jogador_1 ++
+            EPISODE ++
         		escreva ("\nvitoria ",nome_jogador_1)
             u.aguarde(2000)
             opcao = 0
@@ -584,6 +622,7 @@ programa {
             escreva("\nPalpatine:\nSua jornada para o lado sombrio está completa.")
         		pontuacao_jogador_2 ++
         		escreva ("\nvitoria ",nome_jogador_2)
+            EPISODE ++
             u.aguarde(2000)
             opcao = 0
         
