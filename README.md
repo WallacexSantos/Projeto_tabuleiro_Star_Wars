@@ -25,9 +25,10 @@ programa {
         escreva("\n===================================\n")
         escreva("_________TABULEIRO STAR WARS_________\n")
         escreva("=====================================\n")
-        escreva(" Digite [1] Jogar              Digite [4] Sair do Jogo\n")
+        escreva(" Digite [1] Jogar\n")
         escreva(" DIgite [2] Verificar Placar\n")
         escreva(" Digite [3] Créditos\n")
+        escreva(" Digite [4] Sair do Jogo\n")
         escreva("=====================================\n")
       leia(opcao)
       se (opcao  < 1 ou opcao > 4){ 
@@ -85,6 +86,7 @@ programa {
 		escreva("\nEscolha seu caminho... e que a Força esteja com você.")
 		u.aguarde(500)
 		escreva("\n==============================================================")
+		escreva("\n_______________________PARTIDA_INICIADA_______________________")
       }
     }
     se (opcao == 1) {
@@ -103,13 +105,29 @@ programa {
         se(dado_4_lados_j1==1){
         	dado_4_lados_j1 = dado_4_lados_j1-1 
         	dado = u.sorteia(1, 4)
-        	escreva("rolando dado...")
+        	escreva("\nrolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
         	escreva(dado, "\n")
+        	u.aguarde(500)
        	casa_jogador_1 = casa_jogador_1 + dado
         }senao{
         	dado = u.sorteia(1, 6)
-        	escreva("rolando dado...")
+        	escreva("rolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
         	escreva(dado, "\n")
+        	u.aguarde(500)
         	casa_jogador_1 = casa_jogador_1 + dado
         }
         se(casa_jogador_1 == 1) {
@@ -134,8 +152,16 @@ programa {
             		escreva("opcao incorreta, aperte 1 para rolar dado")
           	}    
                dado = u.sorteia(1, 3)
-               escreva("\nrolando dado...")
+               escreva("\nrolando dado")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
                escreva(dado, "\n")
+               u.aguarde(500)
                casa_jogador_1 = casa_jogador_1 + dado
                escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
                
@@ -249,8 +275,16 @@ programa {
         }
         enquanto(rolardado != 1)
         dado = u.sorteia(1, 6)
-        escreva("\nrolando dado...")
-        escreva(dado, "\n")
+        escreva("\nrolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
+          escreva(dado, "\n")
+          u.aguarde(500)
               se  ( dado==2 ou dado==4 ou dado==6 ) {
               escreva("parabens voce se manteve na casa " , casa_jogador_1)
               } senao {
@@ -278,8 +312,16 @@ programa {
             leia(rolardado)
             }
              dado_jogador_1_casa_22 = u.sorteia(1, 6)
-             escreva("\nrolando dado...")
+             escreva("\nrolando dado")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
              escreva(dado_jogador_1_casa_22, "\n")
+             u.aguarde(500)
             escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
             leia(rolardado)
             enquanto(rolardado != 1){
@@ -287,8 +329,16 @@ programa {
             leia(rolardado)
             }
              dado_jogador_2_casa_22 = u.sorteia(1, 6)
-             escreva("\nrolando dado...")
+              escreva("\nrolando dado")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
              escreva(dado_jogador_2_casa_22, "\n")
+             u.aguarde(500)
              se (dado_jogador_2_casa_22 > dado_jogador_1_casa_22){
              casa_jogador_1 = casa_jogador_1-4
              escreva (nome_jogador_2 ," venceu o duelo")
@@ -314,10 +364,24 @@ programa {
                  	dado_2 = u.sorteia(1, 6)
                     soma = dado + dado_2
                     casa_jogador_1 = casa_jogador_1 - soma
-      		  	escreva("\nrolando dado...")
+      		  	escreva("\nrolando dado")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(". ")
        			escreva(dado)
-     		   	escreva("\nrolando dado...")
+     		   	escreva("\nrolando dado")
+      			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(". ")
+        			u.aguarde(500)
      			escreva(dado_2)
+     			u.aguarde(500)
      			escreva("\n", nome_jogador_1  ," devera retroceder ", soma," casas")    
         		 }
           se(rolardado_casa15 != 1){
@@ -375,14 +439,30 @@ programa {
         se(dado_4_lados_j2 == 1){
         	dado_4_lados_j2 = dado_4_lados_j2-1 
         	dado = u.sorteia(1, 4)
-        	escreva("rolando dado...")
+        	escreva("rolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
         	escreva(dado, "\n")
+        	u.aguarde(500)
         	casa_jogador_2 = casa_jogador_2 + dado
         }senao{
         dado = u.sorteia(1, 6)
-        escreva("rolando dado...")
-        escreva(dado, "\n")
-        casa_jogador_2 = casa_jogador_2 + dado
+        escreva("rolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
+          escreva(dado, "\n")
+          u.aguarde(500)
+          casa_jogador_2 = casa_jogador_2 + dado
         }
         se(casa_jogador_2 == 1) {
           escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
@@ -406,7 +486,16 @@ programa {
             		escreva("opcao incorreta, aperte 1 para rolar dado")
           	}    
                dado = u.sorteia(1, 3)
-               escreva("\nrolando dado...")
+               escreva("\nrolando dado")
+        		u.aguarde(500)
+       	 	escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
+        		escreva(dado, "\n")
+        		u.aguarde(500)
                casa_jogador_2 = casa_jogador_2 + dado
                escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
                escreva("\n...")
@@ -520,8 +609,16 @@ programa {
         }
         enquanto(rolardado != 1)
         dado = u.sorteia(1, 6)
-        escreva("\nrolando dado...")
-        escreva(dado, "\n")
+        escreva("\nrolando dado")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(".")
+        	u.aguarde(500)
+        	escreva(". ")
+        	u.aguarde(500)
+          escreva(dado, "\n")
+          u.aguarde(500)
         se  ( dado==1 ou dado==3 ou dado==5 ) {
               escreva("parabens voce se manteve na casa " , casa_jogador_2)
               } senao {
@@ -549,8 +646,16 @@ programa {
             leia(rolardado)
             }
              dado_jogador_2_casa_22 = u.sorteia(1, 6)
-             escreva("\nrolando dado...")
-             escreva(dado_jogador_2_casa_22, "\n")
+             escreva("\nrolando dado")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
+               escreva(dado_jogador_2_casa_22, "\n")
+               u.aguarde(500)
             escreva( "\n" ,nome_jogador_1, " digite 1 para rolar o dado: ")
             leia(rolardado)
             enquanto(rolardado != 1){
@@ -558,8 +663,16 @@ programa {
             leia(rolardado)
             }
              dado_jogador_1_casa_22 = u.sorteia(1, 6)
-             escreva("\nrolando dado...")
-             escreva(dado_jogador_1_casa_22, "\n")
+            escreva("\nrolando dado")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(".")
+        		u.aguarde(500)
+        		escreva(". ")
+        		u.aguarde(500)
+               escreva(dado_jogador_1_casa_22, "\n")
+               u.aguarde(500)
              se (dado_jogador_2_casa_22 > dado_jogador_1_casa_22){
              casa_jogador_1 = casa_jogador_1-4
              escreva (nome_jogador_2 ," venceu o duelo")
@@ -585,10 +698,25 @@ programa {
                  	dado_2 = u.sorteia(1, 6)
                     soma = dado + dado_2
                     casa_jogador_2 = casa_jogador_2 - soma
-      		  	escreva("\nrolando dado...")
+      		  	escreva("\nrolando dado")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(". ")
+        			u.aguarde(500)
        			escreva(dado)
-     		   	escreva("\nrolando dado...")
+     		   	escreva("\nrolando dado")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(".")
+        			u.aguarde(500)
+        			escreva(". ")
+        			u.aguarde(500)
      			escreva(dado_2)
+     			u.aguarde(500)
      			escreva("\n", nome_jogador_2  ," devera retroceder ", soma," casas")    
         		 }senao se(rolardado_casa15 != 1){
             		escreva("opcao incorreta, aperte 1 para rolar dado")
