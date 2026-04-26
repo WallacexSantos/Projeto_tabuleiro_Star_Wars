@@ -22,7 +22,7 @@ programa {
     enquanto(menu == 0){
     enquanto (opcao == 0){
     faca{
-        escreva("\n===================================\n")
+        escreva("\n=====================================\n")
         escreva("_________TABULEIRO STAR WARS_________\n")
         escreva("=====================================\n")
         escreva(" Digite [1] Jogar\n")
@@ -32,11 +32,11 @@ programa {
         escreva(" Digite [5] Sair do Jogo\n")
         escreva("=====================================\n")
       leia(opcao)
-      se (opcao  < 1 ou opcao > 4){ 
+      se (opcao  < 1 ou opcao > 5){ 
         escreva("opção invalida, digite novamente: ")
       }
     }
-    enquanto(opcao  < 1 ou opcao > 4)
+    enquanto(opcao  < 1 ou opcao > 5)
     limpa()
     }
 //AQUI TALVEZ TENHA UM ERRO NA CONTAGEM PARA SEGUNDA VEZ QUANDO O NOME ESTIVER 1, TALVEZ NAO ENTRE AQUI
@@ -1099,6 +1099,7 @@ u.aguarde(100)
 escreva("\n                                                iiiiiiiiiiiiiiiiiiiiii             ")
 u.aguarde(100)
 escreva("\n                                                    ^^^^^^^^^^^^^                  ")
+escreva("\n")
 leia (opcao)
 se (opcao == 1){
   opcao = 3
@@ -1111,10 +1112,24 @@ enquanto (opcao !=0 e opcao !=1){
 
   }
   se (opcao == 4){
-  escreva("\n======================================")
-  escreva("\n| Digite [0] para retornar ao menu   |")
-  escreva("\n======================================")
-  escreva("\n")
+   escreva(" O que acontece ao cair em cada casa Especial.?\n")
+   escreva(" O  que são casas especiais, as casas tem mecanicas distintas e funcionam de maneiras diferentes .\n")
+   escreva("  Casa [2]  ela leva o jogador Diretamente para a casa 5 . \n") 	
+   escreva("  Casa [3]  faz que o jogador jogue um dado Adicional de 3 lados .\n")
+   escreva("  Casa [7]  faz que o jogador nao jogue durante uma rodada, O que pode ser crucial no final. \n")
+   escreva("  Casa [12] faz que o jogador retorne 1 casa, no caso a casa 11. \n")
+   escreva("  Casa [15] O jogador deve cantar um trecho sugerido de uma musica ou senao devera retornar 2 casas caso nao queira.\n")
+   escreva("  Casa [19] funciona como um coringa fazendo o jogador voltar para o inicio caso o mesmo caia nela.  \n")
+   escreva("  Casa [20] O jogador precisa jogar um dado adicional se for um Jedi o resultado deve ser par para manter. se for Sith o impar impede o retrocesso. \n")
+   escreva("  Casa [21] O dado tem seu tamanho reduzido para 4 lados. \n")
+   escreva("  Casa [22] Ocorre um duelo onde o jogador com maior numero no dado lançado vence e o jogador com o menor volta 4 casas e se empatarem ambos mantem nas casas ,o que ajuda bastante no final \n") 
+   escreva("  Casa [23] Nessa casa acontece uma soma que o resultado é igual ao numero de casas para retroceder. \n") 
+   escreva("  Casa [24] O dado deve ser par para prosseguir se for JEDI e impar para um SITH \n")
+   escreva("  Casa [25] é a casa final o guerreiro que chegar aqui é o grande campeão. \n")
+   escreva("\n======================================")
+   escreva("\n| Digite [0] para retornar ao menu   |")
+   escreva("\n======================================")
+   escreva("\n")
         leia (opcao)
   	enquanto (opcao !=0){ 
         escreva("opção invalida, Digite [0] para retornar ao menu: ")
