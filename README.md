@@ -28,7 +28,8 @@ programa {
         escreva(" Digite [1] Jogar\n")
         escreva(" DIgite [2] Verificar Placar\n")
         escreva(" Digite [3] Créditos\n")
-        escreva(" Digite [4] Sair do Jogo\n")
+        escreva(" Digite [4] Guia\n")
+        escreva(" Digite [5] Sair do Jogo\n")
         escreva("=====================================\n")
       leia(opcao)
       se (opcao  < 1 ou opcao > 4){ 
@@ -135,6 +136,7 @@ programa {
           escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
      	escreva("\nQue a Força esteja com você")
         } senao se(casa_jogador_1 == 2){
+        	escreva("==============================================================")
             escreva("voce andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nObi-Wan Kenobi: \nA Força estará com você. Sempre!!")
             escreva("\n",nome_jogador_1, " avancou até a casa 5")
@@ -1082,7 +1084,17 @@ enquanto (opcao <0 e opcao >1){
       limpa()
 
   }
-  se (opcao == 4) {
+  se (opcao == 4){
+  escreva("\n======================================")
+  escreva("\n| Digite [0] para retornar ao menu   |")
+  escreva("\n======================================")
+        leia (opcao)
+  	enquanto (opcao <0 e opcao >1){ 
+        escreva("opção invalida, Digite [0] para retornar ao menu: ")
+        leia (opcao)
+  	}
+  }
+  se (opcao == 5) {
    menu++
   }
   }
