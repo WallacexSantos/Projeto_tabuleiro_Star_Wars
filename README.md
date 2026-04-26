@@ -1077,7 +1077,7 @@ leia (opcao)
 se (opcao == 1){
   opcao = 3
 }
-enquanto (opcao <0 e opcao >1){ 
+enquanto (opcao !=0 e opcao !=1){ 
         escreva("opção invalida, Digite [0] para retornar ao menu: ")
         leia (opcao)
       }
@@ -1088,11 +1088,13 @@ enquanto (opcao <0 e opcao >1){
   escreva("\n======================================")
   escreva("\n| Digite [0] para retornar ao menu   |")
   escreva("\n======================================")
+  escreva("\n")
         leia (opcao)
-  	enquanto (opcao <0 e opcao >1){ 
+  	enquanto (opcao !=0){ 
         escreva("opção invalida, Digite [0] para retornar ao menu: ")
         leia (opcao)
   	}
+  	limpa()
   }
   se (opcao == 5) {
    menu++
