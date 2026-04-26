@@ -96,13 +96,26 @@ programa {
       enquanto(casa_jogador_1 <25 e casa_jogador_2 <25){
        se ( rodada_jogador_1_livre == 0 ) {
         faca{
-          escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+          escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado ou 2 para ver situacao dos jogadores: ")
           leia(rolardado)
-          se(rolardado != 1){
-            escreva("opcao incorreta, aperte 1 para rolar dado")
+          se(rolardado != 1 e rolardado!=2){
+            escreva("opcao incorreta, aperte 1 para rolar dado ou 2 para ver situacao dos jogadores: ")
           }
+          se(rolardado == 2){
+          	escreva ("\n",nome_jogador_1," está na casa ",casa_jogador_1, ".")
+          	escreva ("\n",nome_jogador_2," está na casa ",casa_jogador_2, ".")
+			escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1," vitórias")
+  			escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2," vitórias")
+  			escreva ("\ndigite 1 para sair do placar: ")
+  			leia(rolardado)
+  			enquanto(rolardado !=1){
+  				escreva("opcao incorreta, digite 1 para sair do placar: ")
+  				leia(rolardado)
+  			}
+  			rolardado=3
+        	}
         }
-        enquanto(rolardado != 1)
+        enquanto(rolardado != 1 e rolardado!=2)
         se(dado_4_lados_j1==1){
         	dado_4_lados_j1 = dado_4_lados_j1-1 
         	dado = u.sorteia(1, 4)
@@ -476,13 +489,26 @@ programa {
           se (casa_jogador_1 <25)
           se (rodada_jogador_2_livre == 0 ) {
         faca{
-          escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+          escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado ou 2 para ver situacao dos jogadores: ")
           leia(rolardado)
-          se(rolardado != 1){
-            escreva("opcao incorreta, aperte 1 para rolar dado")
+          se(rolardado != 1 e rolardado!=2){
+            escreva("opcao incorreta, aperte 1 para rolar dado ou 2 para ver situacao dos jogadores: ")
           }
+          se(rolardado == 2){
+          	escreva ("\n",nome_jogador_1," está na casa ",casa_jogador_1, ".")
+          	escreva ("\n",nome_jogador_2," está na casa ",casa_jogador_2, ".")
+			escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1," vitórias")
+  			escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2," vitórias")
+  			escreva ("\ndigite 1 para sair do placar: ")
+  			leia(rolardado)
+  			enquanto(rolardado !=1){
+  				escreva("opcao incorreta, digite 1 para sair do placar: ")
+  				leia(rolardado)
+  			}
+  			rolardado=3
+        	}
         }
-        enquanto(rolardado != 1)
+        enquanto(rolardado != 1 e rolardado!=2)
         se(dado_4_lados_j2 == 1){
         	dado_4_lados_j2 = dado_4_lados_j2-1 
         	dado = u.sorteia(1, 4)
