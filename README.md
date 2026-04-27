@@ -3,7 +3,7 @@ programa {
   funcao inicio() {
     inteiro opcao=0, nome=0, rolardado, dado, casa_jogador_1=0, casa_jogador_2=0, menu = 0, EPISODE = 1
     inteiro pontuacao_jogador_1 = 0, pontuacao_jogador_2 = 0, opcao_casa_15 = 0, dado_jogador_1_casa_22, dado_jogador_2_casa_22
-    inteiro soma ,dado_2 = 0 ,rolardado_casa15, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0, dado_4_lados_j1=0, dado_4_lados_j2=0
+    inteiro soma ,dado_2 = 0 ,rolardado_casa23, casa_vazia = 0, rodada_jogador_1_livre = 0, rodada_jogador_2_livre = 0, dado_4_lados_j1=0, dado_4_lados_j2=0
     cadeia nome_jogador_1 = "jedi" , nome_jogador_2 = "sith"
 
       u.aguarde(1000) //in
@@ -409,9 +409,13 @@ programa {
             escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
             escreva ("\nNessa casa você deverá jogar dois dados, a soma dos dados serão as casas que você deve retroceder")
-            	 escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar os dados: ")
-        		 leia(rolardado_casa15)
-        		 se(rolardado_casa15==1){
+            escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar os dados: ")
+        	  leia(rolardado_casa23)
+        	  enquanto(rolardado_casa23!=1){
+        	  	escreva("Opção incorreta, aperte 1 para rolar dado")
+        	  	leia(rolardado_casa23)
+        	  }	
+        	  se(rolardado_casa23==1){
             		dado = u.sorteia(1,6)
                  	dado_2 = u.sorteia(1, 6)
                     soma = dado + dado_2
@@ -436,10 +440,6 @@ programa {
      			u.aguarde(500)
      			escreva("\n", nome_jogador_1  ," deverá retroceder ", soma," casas")    
         		 }
-          se(rolardado_casa15 != 1){
-            escreva("Opção incorreta, aperte 1 para rolar dado")
-          }
-    	   
                   escreva("\n==============================================================\n")
           }
           senao se(casa_jogador_1 == 24){
@@ -452,7 +452,7 @@ programa {
           	leia(rolardado)
           	se(rolardado != 1){
             		escreva("Opção incorreta, aperte 1 para rolar dado")
-					leia(rolardado)
+            		leia(rolardado)
           	}
        	 }enquanto(rolardado != 1)
 			escreva("\nRolando dado...")
@@ -567,7 +567,7 @@ programa {
         		escreva(dado, "\n")
         		u.aguarde(500)
                casa_jogador_2 = casa_jogador_2 + dado
-               escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
+               escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
                escreva("\n...")
                escreva("\n==============================================================\n")
           }
@@ -794,9 +794,13 @@ programa {
             escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             escreva("\nDarth Vader: \nNão há escapatória. Não me obrigue a destruí-lo!")
             escreva ("\nNessa casa você deverá jogar dois dados, a soma dos dados serão as casas que você deve retroceder")
-                  	escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar os dados: ")
-        		 	leia(rolardado_casa15)
-        		 se(rolardado_casa15==1){
+            escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar os dados: ")
+        	  leia(rolardado_casa23)
+        	  enquanto(rolardado_casa23!=1){
+        	  	escreva("Opção incorreta, aperte 1 para rolar dado")
+        	  	leia(rolardado_casa23)
+        	  	}	 	
+        		 se(rolardado_casa23==1){
             		dado = u.sorteia(1,6)
                  	dado_2 = u.sorteia(1, 6)
                     soma = dado + dado_2
@@ -821,9 +825,7 @@ programa {
      			escreva(dado_2)
      			u.aguarde(500)
      			escreva("\n", nome_jogador_2  ," deverá retroceder ", soma," casas")    
-        		 }senao se(rolardado_casa15 != 1){
-            		escreva("Opção incorreta, aperte 1 para rolar dado")
-         		 }
+        		 }
          		 escreva("\n==============================================================\n")
           }
           senao se(casa_jogador_2 == 24){
@@ -836,7 +838,7 @@ programa {
           	leia(rolardado)
           	se(rolardado != 1){
             		escreva("Opção incorreta, aperte 1 para rolar dado")
-					leia(rolardado)
+            		leia(rolardado)
           	}
        	 }enquanto(rolardado != 1)
 			escreva("\nRolando dado...")
