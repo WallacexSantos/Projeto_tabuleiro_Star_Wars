@@ -1081,14 +1081,14 @@ u.aguarde(100)
 escreva("\n                                                    ^^^^^^^^^^^^^                  ")
 escreva("\n")
 leia (opcao)
-se (opcao == 1){ //BUG
-  opcao = 3
-}
-enquanto (opcao !=0 e opcao !=1){ 
-        escreva("Opção invalida, digite [0] para retornar ao menu: ")
-        leia (opcao)
-      }
-      limpa()
+	enquanto(opcao !=0 e opcao !=1){
+		escreva("opção invalida, Digite [0] para retornar ao menu ou [1] para repetir a animação: ")
+		leia(opcao)
+	}
+	se (opcao == 1){
+  		opcao = 3
+	}
+     limpa()
 
   }
   se (opcao == 4){
