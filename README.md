@@ -1082,7 +1082,15 @@ escreva("\n                                                    ^^^^^^^^^^^^^    
 escreva("\n")
 leia (opcao)
 	enquanto(opcao !=0 e opcao !=1){
-		escreva("opção invalida, Digite [0] para retornar ao menu ou [1] para repetir a animação: ")
+		limpa()
+		escreva("\nopção invalida")
+		u.aguarde(500)
+		limpa()
+		escreva("\n======================================")
+		escreva("\n | Digite [0] para retornar ao menu   |")
+		escreva("\n | Digite [1] para repetir a animação |")
+		escreva("\n======================================")
+		escreva("\n ")
 		leia(opcao)
 	}
 	se (opcao == 1){
