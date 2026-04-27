@@ -452,6 +452,7 @@ programa {
           	leia(rolardado)
           	se(rolardado != 1){
             		escreva("Opção incorreta, aperte 1 para rolar dado")
+					leia(rolardado)
           	}
        	 }enquanto(rolardado != 1)
 			escreva("\nRolando dado...")
@@ -835,6 +836,7 @@ programa {
           	leia(rolardado)
           	se(rolardado != 1){
             		escreva("Opção incorreta, aperte 1 para rolar dado")
+					leia(rolardado)
           	}
        	 }enquanto(rolardado != 1)
 			escreva("\nRolando dado...")
