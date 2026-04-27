@@ -567,7 +567,7 @@ programa {
         		escreva(dado, "\n")
         		u.aguarde(500)
                casa_jogador_2 = casa_jogador_2 + dado
-               escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
+               escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
                escreva("\n...")
                escreva("\n==============================================================\n")
           }
