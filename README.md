@@ -106,7 +106,7 @@ programa {
           			se(rolardado == 2){
           				escreva ("\n",nome_jogador_1," está na casa ",casa_jogador_1, ".")
           				escreva ("\n",nome_jogador_2," está na casa ",casa_jogador_2, ".")
-						escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1," vitórias")
+					   	escreva ("\n",nome_jogador_1," ", pontuacao_jogador_1," vitórias")
   						escreva ("\n",nome_jogador_2," ", pontuacao_jogador_2," vitórias")
   						escreva ("\nDigite 1 para sair do placar: ")
   						leia(rolardado)
@@ -533,7 +533,7 @@ programa {
         				u.aguarde(500)
           			escreva(dado, "\n")
           			u.aguarde(500)
-          			se (casa_jogador_1 !=24 ){
+          			se (casa_jogador_2 !=24 ){
         				casa_jogador_2 = casa_jogador_2 + dado
                 		}
                 		senao{
@@ -1077,8 +1077,8 @@ programa {
 		u.aguarde(100)
 		escreva("\n                                                ;;;i7778888888877ii;;            | Digite [0] para retornar ao menu   |")
 		u.aguarde(100)
-		escreva("\n                                               |i77888888^^^^8888877i|           | Digite [1] para repetir a animação |")
-		u.aguarde(100)
+		escreva("\n                     (DEV`S 404)               |i77888888^^^^8888877i|           | Digite [1] para repetir a animação |")
+		u.aguarde(100)                
 		escreva("\n                 (PROJETO STAR BOARD)          77888^oooo8888oooo^8887|          ======================================")
 		u.aguarde(100)
 		escreva("\n                                              |788888888888888888888888|           ")
@@ -1146,4 +1146,5 @@ programa {
     } 
   }
 }
+
 
