@@ -54,7 +54,7 @@ programa {
       	escreva("==============================================================")
       }
       se (opcao == 1){
-          escreva("\n        █████████████████████████")
+    escreva("\n        █████████████████████████")
 		escreva("\n        █─▄▄▄▄█─▄─▄─██▀▄─██▄─▄▄▀█")
 		escreva("\n        █▄▄▄▄─███─████─▀─███─▄─▄█")
 		escreva("\n        ▀▄▄▄▄▄▀▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▀")
@@ -144,12 +144,22 @@ programa {
         				u.aguarde(500)
         				escreva(dado, "\n")
         				u.aguarde(500)
+                se (casa_jogador_1 !=24 ){
         				casa_jogador_1 = casa_jogador_1 + dado
+                }
+                senao{
+                  se(dado==2 ou dado==4 ou dado==6){
+                    casa_jogador_1 ++
+                  }senao{
+                    escreva("Você não poderá avançar")
+                  }
+                }
         			}
         			se(casa_jogador_1 == 1) {
         				escreva("\n==============================================================\n")
           			escreva("Você andou " ,dado," casas, e está na casa " ,casa_jogador_1)
-     				escreva("\nQue a Força esteja com você")
+     			    	escreva("\nQue a Força esteja com você")
+                escreva("\n==============================================================")
         			}
         			senao se(casa_jogador_1 == 2){
         				escreva("==============================================================")
@@ -166,6 +176,7 @@ programa {
             			escreva("\nAnakin Skywalker:\nÉ aqui que a diversão começa")
             			escreva("\n",nome_jogador_1, " jogue um dado adicional de 3 lados: ")
                		escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+                  escreva("\n==============================================================")
                		leia(rolardado)
             			enquanto(rolardado != 1){
             				escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -238,7 +249,7 @@ programa {
           		senao se(casa_jogador_1 == 11){
             			escreva("\n==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
-            			escreva("\nYoda:\nSempre há mais a aprender.") //BUG
+            			escreva("\nYoda:\nSempre há mais a aprender.") 
             			escreva("\n==============================================================\n")
           		}
           		senao se(casa_jogador_1 == 12){
@@ -315,6 +326,7 @@ programa {
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             			escreva("\nYoda:\nDifícil de ver, o futuro é.")
             			escreva("\nVocê deve jogar um dado adicional, se cair um número par você deve manter na casa, se cair um número impar deve retroceder 3 casas " )
+                  escreva("\n==============================================================")
               			faca{
           				escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
           				leia(rolardado)
@@ -356,6 +368,7 @@ programa {
             			escreva("\nLuke skywalker:\nNão lutarei com você, pai.")
             			escreva("Dois jogadores deverão jogar um dado, quem tirar o menor número deverá voltar 4 casas ")
             			escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
+                  escreva("\n==============================================================")
             			leia(rolardado)
             			enquanto(rolardado != 1){
             				escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -373,6 +386,7 @@ programa {
              			escreva(dado_jogador_1_casa_22, "\n")
              			u.aguarde(500)
             			escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+                  escreva("\n==============================================================")
             			leia(rolardado)
             			enquanto(rolardado != 1){
             				escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -410,6 +424,7 @@ programa {
             			escreva("\nLeia Organa:\nQuanto mais você aperta o controle, mais sistemas vão escapar..")
             			escreva ("\nNessa casa você deverá jogar dois dados, a soma dos dados serão as casas que você deve retroceder")
             			escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar os dados: ")
+                  escreva("\n==============================================================")
         	  			leia(rolardado_casa23)
         	  			enquanto(rolardado_casa23!=1){
         	  				escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -446,23 +461,7 @@ programa {
             			escreva("\n==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             			escreva("\nLuke Skywalker:\nEu sou um Jedi, como meu pai antes de mim.")
-            			escreva("Para avançar, gire um dado, caso tire par poderá prosseguir") //BUG
-            			faca{
-          				escreva( "\n" ,nome_jogador_1, " ,digite 1 para rolar o dado: ")
-          				leia(rolardado)
-          					se(rolardado != 1){
-            					escreva("Opção incorreta, aperte 1 para rolar dado")
-            					leia(rolardado)
-          					}
-       	 			}
-       	 			enquanto(rolardado != 1)
-					escreva("\nRolando dado...")
-					dado=u.sorteia(1, 6)
-        				escreva(dado, "\n")
-            			se(dado==1 ou dado==3 ou dado==5){
-            				escreva("Você não pode avançar")
-            				rodada_jogador_1_livre = rodada_jogador_1_livre + 1	
-            			}
+            			escreva("\nPara avançar, gire um dado, caso tire par poderá prosseguir") 
             			escreva("\n==============================================================\n")         
           		}
           		senao se(casa_jogador_1 >= 25){
@@ -471,7 +470,7 @@ programa {
             			escreva("\nYoda:\nUm Jedi você se tornou.")
             			pontuacao_jogador_1 ++
             			EPISODE ++
-        				escreva ("\nVitória ",nome_jogador_1)
+        				escreva ("\n___Vitória ",nome_jogador_1,"___")
             			u.aguarde(2000)
             			opcao = 0
           			escreva("\n==============================================================")
@@ -529,7 +528,16 @@ programa {
         				u.aguarde(500)
           			escreva(dado, "\n")
           			u.aguarde(500)
-          			casa_jogador_2 = casa_jogador_2 + dado
+          			se (casa_jogador_1 !=24 ){
+        				casa_jogador_2 = casa_jogador_2 + dado
+                }
+                senao{
+                  se(dado==1 ou dado==3 ou dado==5){
+                    casa_jogador_2 ++
+                  }senao{
+                    escreva("Você não poderá avançar")
+                  }
+                }
         			}
         			se(casa_jogador_2 == 1) {
         				escreva("\n==============================================================\n")
@@ -552,6 +560,7 @@ programa {
             			escreva("\nGeneral Grievous:\nIsso fará uma bela adição à minha coleção.")
             			escreva("\n",nome_jogador_2, " jogue um dado adicional de 3 lados: ")
                		escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+                  escreva("\n==============================================================")
                		leia(rolardado)
             			enquanto(rolardado != 1){
             				escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -704,6 +713,7 @@ programa {
               			escreva("\nVocê deve jogar um dado adicional, se cair um número impar você deverá se manter na casa, se cair um número par deverá retroceder 3 casas " )
              			faca{
              				escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
+                    escreva("\n==============================================================")
             				leia(rolardado)
             				se(rolardado != 1){
             					escreva("Opção incorreta, aperte 1 para rolar dado")
@@ -834,23 +844,7 @@ programa {
             			escreva("\n==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             			escreva("\nDarth Vader: \nNão, eu sou seu pai")
-            			escreva("Para avançar, gire um dado, caso tire impar, poderá prosseguir")
-            			faca{
-          				escreva( "\n" ,nome_jogador_2, " ,digite 1 para rolar o dado: ")
-          				leia(rolardado)
-          				se(rolardado != 1){
-            					escreva("Opção incorreta, aperte 1 para rolar dado")
-            					leia(rolardado)
-          				}
-       	 			}
-       	 			enquanto(rolardado != 1)
-					escreva("\nRolando dado...")
-					dado=u.sorteia(1, 6)
-        				escreva(dado, "\n")
-            			se(dado==2 ou dado==4 ou dado==6){
-            				escreva("Você não poderá avançar")
-            				rodada_jogador_2_livre = rodada_jogador_2_livre +1
-            			}
+            			escreva("\nPara avançar, gire um dado, caso tire impar, poderá prosseguir")
             			escreva("\n==============================================================\n")
           		}
           		senao se(casa_jogador_2 >= 25){
@@ -858,7 +852,7 @@ programa {
             			escreva("Você andou " ,dado, " casas, e está na casa 25")
             			escreva("\nPalpatine:\nSua jornada para o lado sombrio está completa.")
         	  			pontuacao_jogador_2 ++
-        	  			escreva ("\nVitória ",nome_jogador_2)
+        	  			escreva ("\n___Vitória ",nome_jogador_2,"___")
             			EPISODE ++
             			u.aguarde(2000)
             			opcao = 0
