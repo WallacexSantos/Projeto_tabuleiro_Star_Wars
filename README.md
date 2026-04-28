@@ -222,6 +222,10 @@ programa {
                		escreva("\nObi-Wan Kenobi:\nSenti uma grande perturbação na Força…")
                		escreva("\n",nome_jogador_1, " fique sem jogar por 1 rodada.")
                		rodada_jogador_1_livre = rodada_jogador_1_livre+2
+                   se (casa_jogador_1 == 7 e casa_jogador_2 == 7){
+                    rodada_jogador_1_livre = 0 
+                    rodada_jogador_2_livre = 0 
+                   }
                		escreva("\n==============================================================\n")
           		}
           		senao se(casa_jogador_1 == 8){
@@ -608,6 +612,10 @@ programa {
             			escreva("\nDarth Vader:\nSua falta de fé é perturbadora.")
             			escreva("\n",nome_jogador_2, " fique sem jogar por 1 rodada.")
             			rodada_jogador_2_livre = rodada_jogador_2_livre+2
+                    se (casa_jogador_1 == 7 e casa_jogador_2 == 7){
+                    rodada_jogador_1_livre = 0 
+                    rodada_jogador_2_livre = 0 
+                   }
             			escreva("\n==============================================================\n")
           		}
           		senao se(casa_jogador_2 == 8){
