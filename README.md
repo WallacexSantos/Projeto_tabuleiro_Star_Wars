@@ -144,16 +144,17 @@ programa {
         				u.aguarde(500)
         				escreva(dado, "\n")
         				u.aguarde(500)
-                se (casa_jogador_1 !=24 ){
-        				casa_jogador_1 = casa_jogador_1 + dado
-                }
-                senao{
-                  se(dado==2 ou dado==4 ou dado==6){
-                    casa_jogador_1 ++
-                  }senao{
-                    escreva("Você não poderá avançar")
-                  }
-                }
+                		se (casa_jogador_1 !=24 ){
+        					casa_jogador_1 = casa_jogador_1 + dado
+                		}
+                		senao{
+                  			se(dado==2 ou dado==4 ou dado==6){
+                    		casa_jogador_1 ++
+                  			}
+                  			senao{
+                   			escreva("Você não poderá avançar")
+                  			}	
+                		}
         			}
         			se(casa_jogador_1 == 1) {
         				escreva("\n==============================================================\n")
@@ -461,7 +462,7 @@ programa {
             			escreva("\n==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             			escreva("\nLuke Skywalker:\nEu sou um Jedi, como meu pai antes de mim.")
-            			escreva("\nPara avançar, gire um dado, caso tire par poderá prosseguir") 
+            			escreva("\nNa próxima rodada, para avançar, gire um dado, caso tire par poderá prosseguir") 
             			escreva("\n==============================================================\n")         
           		}
           		senao se(casa_jogador_1 >= 25){
@@ -530,14 +531,15 @@ programa {
           			u.aguarde(500)
           			se (casa_jogador_1 !=24 ){
         				casa_jogador_2 = casa_jogador_2 + dado
-                }
-                senao{
-                  se(dado==1 ou dado==3 ou dado==5){
-                    casa_jogador_2 ++
-                  }senao{
-                    escreva("Você não poderá avançar")
-                  }
-                }
+                		}
+                		senao{
+                  			se(dado==1 ou dado==3 ou dado==5){
+                    			casa_jogador_2 ++
+                  			}
+                  			senao{
+                    			escreva("Você não poderá avançar")
+                  			}
+                		}
         			}
         			se(casa_jogador_2 == 1) {
         				escreva("\n==============================================================\n")
@@ -844,7 +846,7 @@ programa {
             			escreva("\n==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_2)
             			escreva("\nDarth Vader: \nNão, eu sou seu pai")
-            			escreva("\nPara avançar, gire um dado, caso tire impar, poderá prosseguir")
+            			escreva("\nNa próxima rodada, para avançar, gire um dado, caso tire impar, poderá prosseguir")
             			escreva("\n==============================================================\n")
           		}
           		senao se(casa_jogador_2 >= 25){
