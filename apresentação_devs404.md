@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Introducao star wars" src="https:/<img width="1920" height="1080" alt="9" src="https://github.com/user-attachments/assets/a2d7dc15-648c-411f-b403-21599e5d7f57" />
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/c79bda2d-4268-4ffa-8b18-cf2f5fc768b8" />
 <img width="1920" height="1080" alt="8" src="https://github.com/user-attachments/assets/b57c0881-17c8-4090-9b3d-13d0d96bcb0e" />
 <img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/f44b37e8-ba33-47a0-a001-bcce4d66cb2a" />
 <img width="1920" height="1080" alt="6" src="https://github.com/user-attachments/assets/008511a9-1db2-4682-afc3-a11c29938705" />
