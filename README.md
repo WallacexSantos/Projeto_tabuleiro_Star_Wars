@@ -163,7 +163,7 @@ programa {
                 escreva("\n==============================================================")
         			}
         			senao se(casa_jogador_1 == 2){
-        				escreva("==============================================================")
+        				escreva("==============================================================\n")
             			escreva("Você andou " ,dado, " casas, e está na casa " ,casa_jogador_1)
             			escreva("\nObi-Wan Kenobi: \nA força estará com você, Sempre!!")
             			escreva("\n",nome_jogador_1, " avançou até a casa 5")
